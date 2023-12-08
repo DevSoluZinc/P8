@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvel utilisateur{% endblock %}
+
+{% block header_title %}
+    <h1 class="text-3xl font-bold">Créer un utilisateur</h1>
+{% endblock %}
+
+{% block header_img %}{% endblock %}
+
+{% block body %}
+    <div class="flex justify-center mt-8">
+        <div class="w-full md:max-w-md bg-white shadow-md rounded-lg p-6">
+            {{ include('user/_form.html.twig') }}
+        </div>
+    </div>
+
+    <a href="{{ path('app_user_index') }}" class="block text-blue-500 hover:underline mt-4">Retour à la liste</a>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% for task in myTasks %}
+    <div class="max-w-sm w-full lg:max-w-full lg:flex">
+  <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden" style="background-image: url('/img/card-left.jpg')" title="Woman holding a mug">
+  </div>
+  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+    <div class="mb-8">
+       {% if task.isDone %}
+            <span><i class="fas fa-check text-green-500"></i></span>
+        {% else %}
+            <span><i class="fas fa-hourglass text-yellow-500"></i></span>
+        {% endif %}
+      <div class="text-gray-900 font-bold text-xl mb-2">{% if is_granted('ROLE_ADMIN') %}
+            <a href="{{ path('task_edit', {'id' : task.id }) }}">{{ task.title }}</a>
+        {% else %}
+            {{ task.title }}
+        {% endif %}</div>
+      <p class="text-gray-700 text-base">{{ task.content }}</p>
+    </div>
+    <div class="flex items-center">
+     <form action="{{ path('task_toggle', {'id' : task.id }) }}">
+            {% if not task.isDone %}
+            <button type="button" class="text-white bg-gradient-to-r from-purple-500 to-pink-500 hover:bg-gradient-to-l focus:ring-4 focus:outline-none focus:ring-purple-200 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Valider</button>
+            {% else %}
+<button type="button" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Marquer non terminée</button>
+
+            {% endif %}
+        </form>
+        
+        {% if is_granted('ROLE_ADMIN') %}
+            {{ include('task/_delete_form.html.twig') }}
+        {% endif %}
+    </div>
+  </div>
+</div>
+{% endfor %}

@@ -1,0 +1,17 @@
+{{ form_start(userProfileForm) }}
+
+<div class="mb-4">
+    <label for="username" class="block text-gray-700 text-sm font-bold mb-2 text-pink-800">Nom d'utilisateur</label>
+    {{ form_row(userProfileForm.username, {'id': 'username', 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'}) }}
+</div>
+
+<div class="mb-4">
+    <label for="email" class="block text-gray-700 text-sm font-bold mb-2 text-pink-800">Email</label>
+    {{ form_row(userProfileForm.email, {'id': 'email', 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'}) }}
+</div>
+
+<button class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded" type="submit">
+    {{ button_label|default('Modifier') }}
+</button>
+
+{{ form_end(userProfileForm) }}
