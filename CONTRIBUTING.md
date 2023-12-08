@@ -1,33 +1,28 @@
-# Contributing to ToDo & CO
+# Contribution à ToDo & CO
+
 ## Introduction
 
-Thanks for taking the time to contribute!
+Merci d'avance pour votre contribution !
 
-This file is a set of guidelines for contributing to ToDo & Co App improvement.
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing ToDo & Co App. In return, they should reciprocate that respect in addressing your issue, assessing changes, and helping you finalize your pull requests.
+Ce fichier représente un ensemble de lignes directrices pour contribuer à l'amélioration de ToDo & Co App.
+Suivre ces directives aide à communiquer que vous respectez le temps des développeurs qui gèrent et développent ToDo & Co App. En retour, ils devraient témoigner du même respect en traitant votre problème, en évaluant les modifications et en vous aidant à finaliser vos demandes de fusion (pull requests).
 
-## Code of Conduct
+## Code de conduite
 
-- Using welcoming and inclusive language
-- Being respectful of differing viewpoints and experiences
-- Respecting all points of view and be cool with less
-- Gracefully accepting constructive criticism
-- Focusing your intention on what is best for the community
-- Keeping in mind that is a Teamwork.
+- Utilisation d'un langage accueillant et inclusif
+- Respect des différents points de vue et expériences
+- Considération de toutes les perspectives et tolérance envers les opinions moins partagées
+- Acceptation constructive des critiques
+- Focalisation de vos intentions sur ce qui est le mieux pour la communauté
+- Garder à l'esprit qu'il s'agit d'un travail d'équipe
 
-## How to contribute
-1) **For**k the [repo](https://github.com/olha-r/toDoList).
-2) **Install** the project locally
-If you haven't already, install the project on your machine via Git, following the installation instructions in the [Readme file](Readme.md).
-3) **Create a new branch**, taking care to name it in a coherent and understandable way (in English preferably), e.g. feature-foo or bugfix-bar.
-4) **Make** your **code changes**, dividing into multiple commits if necessary. Write commit messages preferably in English.
-5) **Test** your changes. Prefer adding new test cases over modifying existing ones.
-Run the tests to verify that they always pass after your changes: ``make test``
-6) Then **update the coverage test file** for Codacy, with the following command:
-``bash <(curl -Ls https://coverage.codacy.com/get.sh) report  -r reports/clover.xml``
-7) Push your changes and **create a pull request**.
-More details about PR on  [GitHub documentation.](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests)
+## Comment contribuer
 
-**If your contribution is approved, it will be merged into the main branch of the project.**
-
-**Thanks in advance for contribution!**
+1. **Faites un** fork du [dépôt](https://github.com/DevSoluZinc/P8).
+2. **Installez** le projet localement : Si ce n'est pas déjà fait, installez le projet sur votre machine via Git, en suivant les instructions d'installation dans le [fichier Readme](Readme.md).
+3. **Créez une nouvelle branche**, en veillant à la nommer de manière cohérente et compréhensible (de préférence en anglais), par exemple `feature-foo` ou `bugfix-bar`.
+4. **Effectuez** vos **modifications de code**, en les divisant en plusieurs commits si nécessaire. Rédigez les messages de commit de préférence en anglais.
+5. **Testez** vos modifications : Privilégiez l'ajout de nouveaux cas de test plutôt que la modification des existants. Exécutez les tests pour vérifier qu'ils passent toujours après vos modifications : ``make test``
+6. Ensuite, **mettez à jour le fichier de test de couverture** pour Codacy avec la commande suivante : 
+   ```bash
+   bash <(curl -Ls https://coverage.codacy.com/get.sh) report  -r reports/clover.xml
