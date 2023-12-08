@@ -1,4 +1,4 @@
-## Prérequis sur votre lieu de travail
+## Prérequis 
 #### Serveur
 Vous avez besoin d'un serveur web avec PHP7 (>=7.2.5) et MySQL.
 Versions utilisées dans ce projet :
